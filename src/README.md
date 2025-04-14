@@ -1,27 +1,58 @@
-# EMR
+# 🧪 Chemical Formulatrix
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+**Chemical Formulatrix** is a chemistry-focused Angular application designed to help students and learners with key chemical concepts and computations.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🔍 Features
 
-## Code scaffolding
+- 🧮 **Molecular Mass Calculator** – Calculate molar mass of any compound.
+- 📊 **% Composition** – Find the percent composition of elements in compounds.
+- ⚖️ **Mole Concept Tools** – Work with mole-mass-volume relationships.
+- 🧾 **IUPAC Naming** – Understand and view IUPAC names for compounds.
+- 🧬 **Element Explorer** – Browse elements and their properties.
+- 💡 **Electronic Configuration** – View electronic configurations of elements.
+- 🧪 **Inorganic Compounds** – Study rules and common compound examples.
+- 🧬 **Organic Compounds** – Learn basics of organic chemistry structures.
+- ☠️ **Acids Overview** – Discover formulas and properties of various acids.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🚀 Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 📦 Install dependencies
+```bash
+npm install
 
-## Running unit tests
+💻 Run the project
+bash
+Copy
+Edit
+ng serve
+Then open your browser at: http://localhost:4200/
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+🧰 Tech Stack
+Angular (v15.1.5)
+TypeScript
+SCSS/CSS
 
-## Running end-to-end tests
+📁 Project Structure
+src/app/ – Application modules and components
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+src/assets/ – Static assets (images, data files, etc.)
 
-## Further help
+angular.json – Angular CLI configuration
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](src/assets/image/front.png)
+
+### 🧮 Molecular Mass Calculator
+![Molecular Formula](src/assets/image/molecular_formula.png)
+
+### ⚖️ Mole Concepts
+![Mole Concept](src/assets/images/mole_concepts.png)
+
+### 📊 Percentage Composition
+![Percentage Composition](src/assets/images/percentage_composition.png)
