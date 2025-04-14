@@ -1,0 +1,40 @@
+<mat-toolbar>
+  <img [src]="hospitalPic ? hospitalPic : './../../../assets/image/logo small1.png'" alt="EMR" class="w-1 mr-1" />
+ 
+</mat-toolbar>
+<mat-nav-list *ngFor="let setting of menuList">
+  <mat-list-item
+    *ngIf="setting?.subMenus.length === 0"
+    routerLink="{{ setting.menuRouteLink }}"
+    [routerLinkActive]="'sidenav__active-nav'"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <div class="menu-container">
+      <mat-icon mat-list-icon> {{ setting.icon }} </mat-icon>
+      <span class="margin-left">{{ setting.menuName }}</span>
+    </div>
+  </mat-list-item>
+  <div>
+    <mat-accordion *ngIf="setting?.subMenus.length !== 0">
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-icon> {{ setting.icon }}</mat-icon>
+          <span class="ml-3">{{ setting.menuName }}</span>
+        </mat-expansion-panel-header>
+        <a
+          *ngFor="let subMenu of setting?.subMenus"
+          mat-list-item
+          [routerLink]="subMenu.subMenuRouteLink"
+          [routerLinkActive]="'sidenav__active-nav'"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <mat-icon>{{ subMenu.subIcon }}</mat-icon>
+          <span class="ml-3">{{ subMenu.subMenuName }}</span>
+        </a>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</mat-nav-list>

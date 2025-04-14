@@ -1,0 +1,716 @@
+
+<div class="login-sections">
+  <h5 class="heading"><b>CHEMICAL FORMULATRIX</b></h5>
+<div class="puzzle-container">
+  <div (click)="molecularFormula(myDialog3)" class="puzzle-piece">Molecular Mass Formula</div>
+  <div (click)="composition(myDialog1)" class="puzzle-piece">% Composition</div>
+  <div (click)="mole(myDialog4)" class="puzzle-piece">Mole Concept</div>
+  <div (click)="support(myDialog)" class="puzzle-piece">IUPAC </div>
+  <div (click)="elementd(myDialog7)" class="puzzle-piece">Elements</div>
+  <div (click)="electrnicConfi(myDialog2)" class="puzzle-piece">Electronic Configuration</div>
+  <div class="puzzle-piece">Inorganic Compound</div>
+  <div  (click)="organicCompund" class="puzzle-piece">Organic Compound</div>
+  <div class="puzzle-piece">Acids</div>
+  <div style="width: 500px;height: 500px;">
+
+  <!-- <img src='./../../../assets/image/UImatrix.jpg' alt="EMR" /> -->
+
+  </div>
+</div>
+
+<ng-template #myDialog>
+  <h2 mat-dialog-title class="modal-header">
+    <mat-icon class="button-close" [mat-dialog-close]="true">close</mat-icon>
+    <span class="modal-header-title"><b>IUPAC TABLE</b></span>
+       <br><br>
+  </h2>
+  <div mat-dialog-content class="content">
+   <span class="modal-header-title"><b>Table 1: Root words</b></span>
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Chain Length</th>
+          <th>Root word</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>C<sub>1</sub></th>
+          <td>Meth-</td>
+          <td></td>
+          <td></td>
+          
+        </tr>
+        <tr>
+          <th>C<sub>2</sub></th>
+          <td>Eth-</td>
+          <td></td>
+          <td></td>
+         
+        </tr>
+        <tr>
+          <th>C<sub>3</sub></th>
+          <td>Prop-</td>
+          <td></td>
+          <td></td>
+         
+        </tr>
+        <tr>
+          <th>C<sub>4</sub></th>
+          <td>But-</td>
+          <td></td>
+          <td></td>
+          
+        </tr>
+        <tr>
+          <th>C<sub>5</sub></th>
+          <td>Pent-</td>
+          <td></td>
+          <td></td>
+         
+        </tr>
+        <tr>
+          <th>C<sub>6</sub></th>
+          <td>Hex-</td>
+          <td></td>
+          <td></td>
+          
+        </tr>
+        <tr>
+          <th>C<sub>7</sub></th>
+          <td>Hept-</td>
+          <td></td>
+          <td></td>
+          
+        </tr>
+        <tr>
+          <th>C<sub>8</sub></th>
+          <td>Oct-</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>C<sub>9</sub></th>
+          <td>Non-</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>C<sub>10</sub></th>
+          <td>Dec-</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>C<sub>11</sub></th>
+          <td>Undec-</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>C<sub>12</sub></th>
+          <td>Dodec-</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>C<sub>13</sub></th>
+          <td>Tridec-</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>C<sub>14</sub></th>
+          <td>Tetradec-</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>C<sub>15</sub></th>
+          <td>Pentadec-</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+      <br><br>
+      <span class="modal-header-title"><b>Table 2: Primary Suffix</b></span>
+      <br><br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nature of carbon chain</th>
+            <th scope="col">Primary suffix</th>
+            <th scope="col">Generic name</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Saturated (C – C)</td>
+            <td>-ane</td>
+            <td>Alkane</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Unsaturated (C = C) with one double bond</td>
+            <td>-ene</td>
+            <td>Alkene</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Unsaturated (C ≡ C) with one triple bond</td>
+            <td>-yne</td>
+            <td>Alkyne</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Unsaturated with two C = C bonds</td>
+            <td>-diene</td>
+            <td>Akladiene</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Unsaturated with two C ≡ C bonds</td>
+            <td>-diyne</td>
+            <td>Alkadiyne</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Unsaturated with three C = C bonds</td>
+            <td>-triene</td>
+            <td>Alkatriene</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    <br><br>
+    <span class="modal-header-title"><b>Table 3: Secondary Suffix</b></span>
+    <br><br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Functional Group</th>
+          <th>Secondary suffix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alcohol (-OH)</td>
+          <td>-ol</td>
+         
+        </tr>
+        <tr>
+          <td>Aldehyde (-CHO)</td>
+          <td>-al</td>
+       
+        </tr>
+        <tr>
+          <td>Ketone (>CO)</td>
+          <td>-one-</td>
+        
+        </tr>
+        <tr>
+          <td>Carbonxylic acid (-COOH)</td>
+          <td>-oic acid</td>
+          
+        </tr>
+        <tr>
+          <td>Sulphonic (-SO3H)</td>
+          <td>-sulphonic acid</td>
+        </tr>
+        <tr>
+          <td>Amine (-NH2)</td>
+          <td>-amine</td>
+        </tr>
+        <tr>
+          <td>Thioalcohol (-SH)</td>
+          <td>-thiol</td>
+        </tr>
+        <tr>
+          <td>Cyanide (-CN)</td>
+          <td>-nitrile</td>
+        </tr>
+        <tr>
+          <td>Ester (-COOR)</td>
+          <td>-oate</td>
+        </tr>
+        <tr>
+          <td>Amide (-CONH2)</td>
+          <td>-amide</td>
+        </tr>
+        <tr>
+          <td>Acid halide (-COX)</td>
+          <td>-oyl halide</td>
+        </tr>
+      </tbody>
+    </table>
+    <br><br>
+    <span><b>Note:</b>The terminal ‘e’ of the primary suffix is removed when initial letter of secondary suffix is vowel. To illustrate the application of above basic rule, the generic names of few classes of organic compounds are given below:</span>
+    <br><br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Homologous series</th>
+          <th>Root word</th>
+          <th>Primary suffix</th>
+          <th>Secondary suffix</th>
+          <th>Generic name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alcohols (saturated)</td>
+          <td>Alk</td>
+          <td>-ane</td>
+          <td>-ol</td>
+          <td>Alkanol</td>
+        </tr>
+        <tr>
+          <td>Alcohols (unsaturated) one double bond</td>
+          <td>Alk</td>
+          <td>-ene</td>
+          <td>-ol</td>
+          <td>Alkenol</td>
+        </tr>
+        <tr>
+          <td>Alcohols (unsaturated) one triple bond</td>
+          <td>Alk</td>
+          <td>-yne</td>
+          <td>-ol</td>
+          <td>Alkynol</td>
+        </tr>
+        <tr>
+          <td>Aldehydes (saturated)</td>
+          <td>Alk</td>
+          <td>-ane</td>
+          <td>-al</td>
+          <td>Alkanal</td>
+        </tr>
+        <tr>
+          <td>Ketones (saturated)</td>
+          <td>Alk</td>
+          <td>-ane</td>
+          <td>-one</td>
+          <td>Alkanone</td>
+          
+        </tr>
+        <tr>
+          <td>Carboxylic acids (Saturated)</td>
+          <td>Alk</td>
+          <td>-ane</td>
+          <td>-oic acid</td>
+          <td>Alkanoic acid</td>
+        </tr>
+        <tr>
+          <td>Acid chlorindes (saturated)</td>
+          <td>Alk</td>
+          <td>-ane</td>
+          <td>-oyl chloride</td>
+          <td>Alkanoyl chloride</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+</ng-template>
+
+<ng-template #myDialog1>
+  <h2 mat-dialog-title class="modal-header">
+    <mat-icon class="button-close" [mat-dialog-close]="true">close</mat-icon>
+    <span class="modal-header-title">PERCENTAGE COMPOSITION</span>
+  </h2>
+  <div mat-dialog-content class="content">
+    <form [formGroup]="supportForm">
+      <mat-form-field appearance="fill">
+        <mat-label></mat-label>
+        <input formControlName="calculatePer" matInput />
+      </mat-form-field>
+      &nbsp; &nbsp;
+      <button mat-flat-button (click)="submitSupportForm()" color="accent">
+        Calculate
+      </button>
+     
+
+      <!-- <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Molas Mass Of Elements</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of matchingElements">
+          <th scope="row">{{data.name}}</th>
+          <td>{{data.AtomicMass}}</td>
+        </tr>
+        </tbody>
+    </table> -->
+      <br>
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">Element</th>
+            <th scope="col">Count</th>
+            <th scope="col">Atomic Mass</th>
+            <th scope="col">Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Display each element with its details -->
+          <tr *ngFor="let element of matchingElements">
+            <td>{{ element.name }}</td>
+            <td>{{ element.count }}</td>
+            <td>{{ element.AtomicMass }}</td>
+
+            <td>{{ ((element.AtomicMass * element.count) / atomicMass) * 100 | number: '1.2-2' }}%</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </form>
+
+  </div>
+
+</ng-template>
+
+<ng-template #myDialog2>
+  <h2 mat-dialog-title class="modal-header">
+    <mat-icon class="button-close" [mat-dialog-close]="true">close</mat-icon>
+    <span class="modal-header-title">Composition</span>
+  </h2>
+  <div mat-dialog-content class="content">
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Index</th>
+          <th scope="col">Element Name</th>
+          <th scope="col">Electronic Configuration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let element of electronicConfiguration; let i=index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ element.name }}</td>
+          <td>{{ element.elect }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+  </div>
+
+</ng-template>
+<ng-template #myDialog3>
+  <h2 mat-dialog-title class="modal-header">
+    <mat-icon class="button-close" [mat-dialog-close]="true">close</mat-icon>
+    <span class="modal-header-title">MOLECULAR MASS</span>
+  </h2>
+  <div mat-dialog-content class="content">
+    <form [formGroup]="supportForm">
+      <mat-form-field appearance="fill">
+        <mat-label></mat-label>
+        <input formControlName="empFormula" matInput />
+      </mat-form-field>
+      &nbsp; &nbsp;
+      <button mat-flat-button (click)="submitEmpForm()" color="accent">
+        Convert
+      </button>
+      <h2> Molecular Mass : {{atomicMass}} </h2>
+    </form>
+
+
+
+
+  </div>
+
+</ng-template>
+<br>
+<ng-template #myDialog4>
+  <h2 mat-dialog-title class="modal-header">
+    <mat-icon class="button-close" [mat-dialog-close]="true">close</mat-icon>
+    <span class="modal-header-title">MOLE CONCEPT</span>
+    <br>
+  </h2>
+  <br><br>
+  <div mat-dialog-content class="content">
+    <form [formGroup]="molesForm">
+      <mat-form-field appearance="fill">
+
+        <input formControlName="volume" placeholder="Volume given" matInput />
+      </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <mat-form-field appearance="fill">
+        <input formControlName="massGiven" placeholder="Mass given" matInput />
+      </mat-form-field>
+      &nbsp;&nbsp;&nbsp;&nbsp; 
+     
+
+      <mat-form-field appearance="fill">
+        <input formControlName="chemicalCompund" placeholder="Chemical Compund/Element" matInput />
+      </mat-form-field>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <mat-form-field appearance="fill">
+
+        <input formControlName="moleculesGiven" placeholder="Molecules given" matInput />
+      </mat-form-field>
+      &nbsp; &nbsp;<br><br><br><br>
+
+      <h2> <b>Number Of Moles:</b> {{numberOfMoles}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Number Of Moles:</b>{{totalAotoMicMass
+        }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Number Of Moles:</b>{{moles}}</h2>
+      <br>
+      <div class="btn">
+        <button mat-flat-button (click)="reset()">
+          Reset
+        </button>&nbsp;
+        <button mat-flat-button (click)="submitMolesForm()" color="accent">
+          Convert
+        </button>
+      </div>
+    </form>
+  </div>
+
+  
+  <br>
+  <br>
+  <span style="margin-left: 520px;"> <b>No of One mole is : 6.022x10^23 </b></span>
+  <br>
+  <br>
+  <br>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">No. Moles By Volume Given</th>
+        <th scope="col">No. Moles By Atomic/ Molecule Mass Given</th>
+        <th scope="col">No. Moles By Molecules Given</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Display each element with its details -->
+      <tr>
+        <td>For calculating the moles from the volume of pure liquid or solid first, we have to Multiply the volume by the density to get the mass.
+          Then Divide the mass by the molar mass to get the number of moles.</td>
+        <td>To calculate the number of moles of any substance in the sample, we simply divide the given weight of the substance by its molar mass.</td>
+        <td>To go from moles to molecules, multiply the number of moles by 6.022 x 10^23.</td>
+      </tr>
+      <tr>
+        <td>The formula to find out the number of moles at STP is Number of moles = Molar volume at STP litres /V o l u m e ITP litres.</td>
+        <td>1 mole is a number equal to 6.022 x 10^23 particles,</td>
+        
+
+        <!-- <td>Converting between molecules and moles is done by either multiplying by or dividing by Avogadro's number:</td> -->
+      </tr>
+      <tr>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+</ng-template>
+
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div class="container">
+  <app-selection-bar (highlightElement)="highlightElement($event)" [currentAtomCategory]="category"></app-selection-bar>
+  <app-periodic-table [selectedMetal]="highlightState"
+    (currentAtomCategory)="setCurrentAtomCategory($event)"></app-periodic-table>
+  <app-footer></app-footer>
+</div> -->
+<ng-template #myDialog5>
+  <h2 mat-dialog-title class="modal-header">
+    <mat-icon class="button-close" [mat-dialog-close]="true">close</mat-icon>
+    <span class="modal-header-title">IUPAC TABLE</span>
+  </h2>
+  <div mat-dialog-content class="content">
+    <span>IUPAC</span>
+    <br>
+    <img src="/Logo Medium.png" alt="">
+  
+    <span class="modal-header-title"> Primary SuffixE</span>
+    <!-- <html>
+      <caption style="margin-left: 450px;">DETAILS</caption>
+
+    <head>
+      <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      
+      th,
+      td {
+        padding: 20px;
+      }
+      
+      th {
+        text-align: left;
+      }
+      </style>
+    </head>
+    
+    <body>
+      <table style="width:100%">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Priya</td>
+          <td>Sharma</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td>Arun</td>
+          <td>Singh</td>
+          <td>32</td>
+        </tr>
+        <tr>
+          <td>Sam</td>
+          <td>Watson</td>
+          <td>41</td>
+        </tr>
+      </table>
+    </body>
+    
+    </html> -->
+    <span class="modal-header-title">Secondary Suffix</span>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <span class="modal-header-title">IUPAC TABLE</span>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</ng-template>
+
+<ng-template #myDialog7>
+
+  <h2 mat-dialog-title class="modal-header">
+    <mat-icon class="button-close" [mat-dialog-close]="true">close</mat-icon>
+    <span class="modal-header-title">Elements</span>
+    </h2>
+  <img src='./../../../assets/image/td.png' alt="EMR" />
+  <table mat-table
+       [dataSource]="dataSource" multiTemplateDataRows
+       class="mat-elevation-z8">
+  <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+  </ng-container>
+
+  <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+  <ng-container matColumnDef="expandedDetail">
+    <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+      <div class="example-element-detail"
+           [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+        <div class="example-element-diagram">
+          <div class="example-element-position"> {{element.position}} </div>
+          <div class="example-element-symbol"> {{element.symbol}} </div>
+          <div class="example-element-name"> {{element.name}} </div>
+          <div class="example-element-weight"> {{element.weight}} </div>
+        </div>
+        <div class="example-element-description">
+          {{element.description}}
+          <span class="example-element-description-attribution"> -- Wikipedia </span>
+        </div>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+      class="example-element-row"
+      [class.example-expanded-row]="expandedElement === element" 
+      (click)="expandedElement = expandedElement === element ? null : element">
+  </tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+</table>
+
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
+  </ng-template>
+
+</div>

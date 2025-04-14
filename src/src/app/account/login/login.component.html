@@ -1,0 +1,106 @@
+<section class="login-section">
+  <h1><b>CHEMICAL FORMULATRIX</b></h1>
+  <div class="login flex justify-center items-center h-screen">
+    <div
+      class="login__form flex flex-col gap-y-4 items-center justify-center p-6 w-10/12 md:w-6/12 lg:w-2/5 xl:w-1/4 max-w-sm rounded-xl bg-gradient-to-b from-white via-white z-10">
+      <!-- <img
+        src="./../../../assets/image/Logo Medium.png"
+        alt="EMR"
+        class="w-32"
+      /> -->
+      <h1><b>CHEMICAL FORMULATRIX</b></h1>
+      <form [formGroup]="loginForm" (ngSubmit)="submitForm()" class="mt-4 w-full flex flex-col gap-y-1">
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Enter Email" formControlName="emailId" (blur)="trimInput('emailId')" />
+          <mat-icon matSuffix>person</mat-icon><mat-error
+            *ngIf="this.loginForm.controls['emailId'].hasError('required')">Email is required.
+          </mat-error>
+          <mat-error *ngIf="this.loginForm.controls['emailId'].hasError('emailId')">
+            Please enter valid emailId.</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input [type]="hide ? 'password' : 'text'" matInput placeholder="********" formControlName="password"
+            (blur)="trimInput('password')" />
+          <mat-icon matSuffix (click)="hide = !hide">{{
+            hide ? "visibility_off" : "visibility"
+            }}</mat-icon>
+          <mat-error *ngIf="this.loginForm.controls['password'].hasError('required')">Password is required.
+          </mat-error>
+        </mat-form-field>
+        <!-- <p class="flex flex-col items-end mb-4 md:justify-between">
+          <span
+            class="forgot-password cursor-pointer text-blue-500 hover:underline underline-offset-8"
+            (click)="openForgotPasswordWindow()"
+            >Forgot Password ?</span
+          > 
+        </p> -->
+        <div class="btn_row flex flex-col">
+          <button mat-flat-button color="accent">Sign In</button>
+          <br>
+        </div>
+      </form>
+      <button (click)="register(myDialog4)" mat-flat-button color="accent">Register</button>
+    </div>
+  </div>
+</section>
+
+<ng-template #myDialog4>
+  <h2 mat-dialog-title class="modal-header">
+    <span class="modal-header-title">User Register</span>
+    <mat-icon class="button-close" [mat-dialog-close]="true">close</mat-icon>
+  </h2>
+  <div mat-dialog-content class="content">
+
+    <div mat-dialog-content class="content">
+      <form  [formGroup]="registerGorm" class="grid gap-x-6 md:grid-cols-2 lg:w-12/12" s>
+
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input formControlName="userName"  matInput type="text" placeholder="Enter Name" />
+
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input formControlName="lastName" matInput type="text" placeholder="Enter Last Name" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Class</mat-label>
+          <input formControlName="standard" matInput type="text" placeholder="Enter Class" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile Number</mat-label>
+          <input formControlName="mobileNo"  matInput type="text" placeholder="Enter Mobile Number" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input formControlName="emailId"  matInput type="text" placeholder="Enter Email" />
+
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input [type]="hide ? 'password' : 'text'" matInput placeholder="********" formControlName="password"
+          (blur)="trimInput('password')" />
+
+        </mat-form-field>
+      </form>
+    </div>
+
+    <div mat-dialog-actions
+      class="modal-action flex justify-end md:justify-end items-center px-4 py-2 mat-mdc-dialog-actions buttons">
+      <button mat-stroked-button color="primary" [mat-dialog-close]="true">
+        Cancel
+      </button>
+
+      <button (click)="registerUser()" mat-flat-button color="accent" type="button" [mat-dialog-close]="true">
+        Save
+      </button>
+    </div>
+
+  </div>
+
+</ng-template>

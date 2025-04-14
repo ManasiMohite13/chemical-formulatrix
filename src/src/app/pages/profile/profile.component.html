@@ -1,0 +1,235 @@
+
+<div class="btn-row-justified sm_btn-row-left mb-1">
+  <mat-button-toggle-group class="mat-toggle-group">
+    <mat-button-toggle [checked]="userProfile" (click)="onTabChange(0)">
+      Profile</mat-button-toggle
+    >
+    <mat-button-toggle [checked]="userChangePassword" (click)="onTabChange(1)"
+      >Change Password</mat-button-toggle
+    >
+  </mat-button-toggle-group>
+
+<!-- <br><br> -->
+  <!-- <div class="card-borered" >
+    <header>
+      <h2>Profile Details</h2>
+    </header>
+    <div >
+      <div class="profile-wrapper">
+        <ul>
+         <li>
+            <span>First Name</span><span><span class="colon">:</span> {{ userList?.firstName }}</span>
+          </li>
+     
+          <li>
+            <span>Last Name </span><span><span class="colon">:</span>{{ userList?.lastName }}
+             </span>
+          </li>
+          <li>
+            <span>Email</span><span><span class="colon">:</span>{{ userList?.email }}
+             </span>
+          </li>
+          <li>
+            <span>
+              <mat-label>Mobile Number</mat-label>
+            </span><span><span class="colon">:</span>{{ userList?.mobileNumber }}
+             </span>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-row-left btn-row-left--footer">
+        <button mat-flat-button color="primary" (click)="support(myDialog)" class="listing-button">
+          Edit
+        </button>
+      </div>
+    </div> 
+      
+    </div> 
+    <!-- <ng-template #myDialog> -->
+  <div class="dx-card" *ngIf="userProfile" >
+    <div class="dx-card__content my-3">
+      <form
+        [formGroup]="profileForm"
+        class="grid gap-x-6 md:grid-cols-2 lg:w-6/12"
+      >
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input
+            formControlName="firstName"
+            matInput
+            placeholder="Enter First Name"
+          />
+          <mat-error
+          *ngIf="this.profileForm.controls['firstName'].hasError('required')"
+          >First name is required
+        </mat-error>
+        <mat-error
+        *ngIf="this.profileForm.controls['firstName'].hasError('pattern')"
+        >First name contain only character and _
+      </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input
+            formControlName="lastName"
+            matInput
+            placeholder="Enter Last Name"
+          />
+          <mat-error
+          *ngIf="this.profileForm.controls['lastName'].hasError('required')"
+          >Last name is required
+        </mat-error>
+        <mat-error
+        *ngIf="this.profileForm.controls['lastName'].hasError('pattern')"
+        >last name contain only character and _
+      </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input
+            formControlName="email"
+            matInput
+            type="email"
+            placeholder="Enter Email"
+          />
+          <mat-error
+          *ngIf="this.profileForm.controls['email'].hasError('required')"
+          >Email is required
+        </mat-error>
+        <mat-error
+        *ngIf="this.profileForm.controls['email'].hasError('email')"
+        >Please enter valid email 
+      </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile Number</mat-label>
+          <input
+            formControlName="mobileNumber"
+            matInput
+            type="text"
+            placeholder="Enter Mobile Number"
+          />
+          <mat-error
+          *ngIf="this.profileForm.controls['mobileNumber'].hasError('required')"
+          >Mobile number is required
+        </mat-error>
+        <mat-error
+        *ngIf="this.profileForm.controls['mobileNumber'].hasError('pattern')"
+        >Please enter valid contact no.
+      </mat-error>
+
+        </mat-form-field>
+
+        <!-- <div class="self-end md:self-center items-center flex space-x-2">
+        <button
+          mat-flat-button
+          color="primary"
+         
+          type="button"
+        >
+          Change Password
+        </button>
+      </div> -->
+      </form>
+      <div mat-dialog-actions > <button mat-stroked-button color="primary" (click)="cancel()"> Cancel </button>&nbsp;
+      <button mat-flat-button color="accent" type="button"  [disabled]="profileForm.invalid"  (click)="submitProfileForm()">Update</button>
+     </div>
+    </div>
+  </div>
+<!-- </ng-template> -->
+  <div class="dx-card" *ngIf="userChangePassword">
+    <div class="dx-card__content my-2">
+      <form
+        [formGroup]="changePasswordForm"
+        class="grid gap-x-6 md:grid-cols-1 lg:w-3/12"
+      >
+      <mat-form-field appearance="fill" class="paswordtooltip">
+        <mat-label>Old Password</mat-label>
+        <input
+          matInput
+          formControlName="oldPassword"
+          [type]="!oldPasswordVisible ? 'text' : 'password'"
+          placeholder="Enter old Password"
+          required
+        />
+        <mat-icon matSuffix (click)="toggleOldPasswordVisibility()">
+          {{ oldPasswordVisible ? 'visibility_off' : 'visibility' }}
+        </mat-icon>
+        <mat-error *ngIf="this.changePasswordForm.controls['oldPassword'].hasError('required')">
+          Old password is required
+        </mat-error>
+      </mat-form-field>
+      
+      
+
+        <mat-form-field appearance="fill" class="paswordtooltip">
+          <mat-label>New Password</mat-label>
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            placeholder="Enter new password"
+            formControlName="newPassword"
+            required
+          />
+          <mat-icon matSuffix (click)="hide = !hide">{{
+            hide ? "visibility_off" : "visibility"
+          }}</mat-icon>
+          <mat-error
+            *ngIf="
+              this.changePasswordForm.controls['newPassword'].hasError(
+                'required'
+              )
+            "
+            >New password is required</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="paswordtooltip">
+          <mat-label>Re Password</mat-label>
+          <input
+            matInput
+            placeholder="Enter Re password"
+            [type]="visible ? 'password' : 'text'"
+            formControlName="retypePassword"
+            required
+          />
+          <mat-icon matSuffix (click)="visible = !visible">{{
+            visible ? "visibility_off" : "visibility"
+          }}</mat-icon>
+          <mat-error
+            *ngIf="
+              this.changePasswordForm.controls['retypePassword'].hasError(
+                'required'
+              )
+            "
+            >Re password is required</mat-error
+          >
+          <mat-error
+            *ngIf="
+              this.changePasswordForm.controls['retypePassword'].hasError(
+                'confirmedValidator'
+              )
+            "
+            >New Password and re password not Match.</mat-error
+          >
+         
+        </mat-form-field>
+
+        <div class="self-end md:self-center items-center flex space-x-2 mt-3">
+          <button mat-stroked-button color="primary" (click)="cancelPasswordForm()"
+          class="mt-2">
+         Cancel
+        </button>
+          <button
+          mat-flat-button color="accent" type="button"
+            (click)="changePasswordSubmit()"
+            [disabled]="changePasswordForm.invalid"
+            type="button"
+            class="mt-2"
+          >
+            Update Password
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,281 @@
+
+.puzzle-container {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-gap: 10px;
+  width: 700px;
+  margin: 200px;
+  margin-top: 20px;
+  overflow: auto;
+  
+}
+.puzzle-container::-webkit-scrollbar {
+  display: none;
+}
+
+.puzzle-piece {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 156px;
+  background-color: lightblue;
+  cursor: pointer;
+}
+.btn{
+  margin-left: 500px;
+  margin-top: 80px;
+}
+
+.py-6 {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+@media (min-width: 640px){
+.ptable {
+  gap: 0.25rem;
+}
+.ptable {
+  display: grid;
+  gap: 1px;
+  grid-auto-columns: minmax(0,1fr);
+}
+*, :after, :before {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position: ;
+  --tw-gradient-via-position: ;
+  --tw-gradient-to-position: ;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59,130,246,.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+}
+*, :after, :before {
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+}
+user agent stylesheet
+div {
+  display: block;
+}
+.space-y-2>:not([hidden])~:not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-bottom: calc(0.5rem*var(--tw-space-y-reverse));
+  margin-top: calc(0.5rem*(1 - var(--tw-space-y-reverse)));
+}
+.border-theme {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--color-theme)/var(--tw-border-opacity));
+}
+.theme-element {
+  --color-theme: 8 212 170;
+  --color-theme-lighter: rgba(8,212,170,.5);
+  --color-theme-lightest: rgba(8,212,170,.1);
+}
+.body, body {
+  min-width: var(--site-min-width);
+  -webkit-print-color-adjust: exact!important;
+  print-color-adjust: exact!important;
+}
+.body, body {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  background-color: rgb(255 255 255/var(--tw-bg-opacity));
+  color: rgb(17 24 39/var(--tw-text-opacity));
+  font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: inherit;
+  margin: 0;
+}
+style attribute {
+  --scrollbar-width: 17px;
+}
+:root {
+  --color-theme: 0 113 188;
+  --color-theme-lighter: rgba(0,113,188,.5);
+  --color-theme-lightest: rgba(0,113,188,.1);
+  --color-primary-blue: 32 85 138;
+  --color-active-blue: 0 113 188;
+  --site-min-width: 300px;
+  --site-max-width: 2000px;
+  --scrollbar-width: 0px;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: normal;
+  font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-variation-settings: normal;
+  line-height: 1.5;
+  tab-size: 4;
+}
+*, :after, :before {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position: ;
+  --tw-gradient-via-position: ;
+  --tw-gradient-to-position: ;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59,130,246,.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+}
+:after, :before {
+  --tw-content: "";
+}
+*, :after, :before {
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+}
+}
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: #f5f5f5;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+.mase{
+  width: 100%;
+  height: 400px;
+}
+.heading{
+  margin-left: 150px;
+ //margin-top: 70px;
+  // width: 400%;
+  font-size: 50px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+// div {
+//   overflow: hidden; /* This will hide the scroll bar for the specific div */
+// }
+body::-webkit-scrollbar {
+  display: none; /* hide the scrollbar */
+}

@@ -1,0 +1,11 @@
+{
+  "apiURL": "http://localhost:8080/",
+  "logRocket": "",
+  "apmServiceConfig": {
+    "serverUrl": "",
+    "serviceName": "",
+    "environment": "",
+    "transactionSampleRate": "",
+    "serviceVersion": ""
+  }
+}
