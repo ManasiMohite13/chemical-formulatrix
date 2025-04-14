@@ -43,7 +43,7 @@ angular.json – Angular CLI configuration
 ![Molecular Formula](src/src/assets/image/molecular_formula.png)
 
 ### ⚖️ Mole Concepts
-![Mole Concept](src/assets/image/mole_concepts.png)
+![Mole Concept](src/src/assets/image/mole_concepts.png)
 
 ### 📊 Percentage Composition
-![Percentage Composition](src/assets/image/percentage_composition.png)
+![Percentage Composition](src/src/assets/image/percentage_composition.png)
