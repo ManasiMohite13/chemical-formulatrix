@@ -37,10 +37,10 @@ angular.json – Angular CLI configuration
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](src/assets/image/front.png)
+![Home Page](src/src/assets/image/front.png)
 
 ### 🧮 Molecular Mass Calculator
-![Molecular Formula](src/assets/image/molecular_formula.png)
+![Molecular Formula](src/src/assets/image/molecular_formula.png)
 
 ### ⚖️ Mole Concepts
 ![Mole Concept](src/assets/image/mole_concepts.png)
